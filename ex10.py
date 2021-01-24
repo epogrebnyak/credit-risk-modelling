@@ -25,14 +25,15 @@ David Jamieson Bolder, February 2018
 """
 # This is the base location for your code implementation
 # You'll need to change this to reflect your own personal location
-myHome = "/home/djb/Work/cmBook/GitHub/"
+from pathlib import Path
+myHome = Path(__file__).parent / "data"
 # This is the simulated transition-data file
-expFile = myHome + "exposures.npy"
-XFile = myHome + "X.npy"
-YFile = myHome + "Y.npy"
-pMapFile = myHome + "pMap.npy"
-allPFile = myHome + "allP.npy"
-X0File = myHome + "X0.npy"
+expFile = myHome / "exposures.npy"
+XFile = myHome / "X.npy"
+YFile = myHome / "Y.npy"
+pMapFile = myHome / "pMap.npy"
+allPFile = myHome / "allP.npy"
+X0File = myHome / "X0.npy"
 import assetCorrelation as ac
 import binomialPoissonModels as bp
 # Loading the necessary libraries

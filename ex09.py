@@ -1,5 +1,3 @@
-import importlib
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pylab
@@ -24,9 +22,10 @@ David Jamieson Bolder, February 2018
 """
 # This is the base location for your code implementation
 # You'll need to change this to reflect your own personal location
-myHome = "/home/djb/Work/cmBook/GitHub/"
+from pathlib import Path
+myHome = Path(__file__).parent / "data"
 # This is the transition-data file
-transitionFile = myHome + "transitionData.npy"
+transitionFile = myHome / "transitionData.npy"
 import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util
@@ -38,15 +37,6 @@ import thresholdModels as th
 import varContributions as vc
 import varianceReduction as vr
 
-importlib.reload(util)
-importlib.reload(bp)
-importlib.reload(mix)
-importlib.reload(th)
-importlib.reload(mert)
-importlib.reload(irb)
-importlib.reload(vc)
-importlib.reload(vr)
-importlib.reload(mc)
 plt.close("all")
 # Key parameters and inputs
 wStart = np.array([0.25, 0.50, 0.25, 0.00])

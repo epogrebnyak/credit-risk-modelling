@@ -24,7 +24,8 @@ David Jamieson Bolder, February 2018
 """
 # This is the base location for your code implementation
 # You'll need to change this to reflect your own personal location
-myHome = "/home/djb/Work/cmBook/GitHub/"
+from pathlib import Path
+myHome = Path(__file__).parent / "data"
 import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util

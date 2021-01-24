@@ -1,4 +1,13 @@
-import importlib
+"""
+BRIEF DESCRIPTION:
+This is an example file associated with the code library for Chapter 3. In 
+this example, we simulate the binomial independent-default, beta-binomial 
+mixture, and logit-normal mixture models. We then print out a subset of their
+risk measures and graph the associated tail probabilities.
+-----------------
+David Jamieson Bolder, February 2018
+"""
+
 import time
 
 import matplotlib.pyplot as plt
@@ -11,29 +20,19 @@ import scipy
 import seaborn as sns
 
 sns.set()
-"""
-BRIEF DESCRIPTION:
-This is an example file associated with the code library for Chapter 3. In 
-this example, we simulate the binomial independent-default, beta-binomial 
-mixture, and logit-normal mixture models. We then print out a subset of their
-risk measures and graph the associated tail probabilities.
------------------
-David Jamieson Bolder, February 2018
-"""
+
 # This is the base location for your code implementation
 # You'll need to change this to reflect your own personal location
-myHome = "/home/djb/Work/cmBook/GitHub/"
+from pathlib import Path
+myHome = Path(__file__).parent / "data"
 # These are the exposure and default-probability files
-dpFile = myHome + "defaultProbabilties.npy"
-expFile = myHome + "exposures.npy"
+dpFile = myHome / "defaultProbabilties.npy"
+expFile = myHome / "exposures.npy"
+
 import binomialPoissonModels as bp
 # Loading the necessary libraries
-import cmUtilities as util
 import mixtureModels as mix
 
-importlib.reload(util)
-importlib.reload(bp)
-importlib.reload(mix)
 plt.close("all")
 # Key inputs and parameters
 c = np.load(expFile)
