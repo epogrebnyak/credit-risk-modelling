@@ -1,4 +1,13 @@
-import importlib
+"""
+BRIEF DESCRIPTION:
+This is an example file associated with the code library for Chapter 2. In 
+this example, we use the functions in binomialPoissonModels.py to simulate
+the binomial and Poisson independent-default models, print the results and
+graph the tail probabilities.
+-----------------
+David Jamieson Bolder, February 2018
+"""
+
 import time
 from pathlib import Path
 
@@ -11,15 +20,6 @@ pylab.show()
 import seaborn as sns
 
 sns.set()
-"""
-BRIEF DESCRIPTION:
-This is an example file associated with the code library for Chapter 2. In 
-this example, we use the functions in binomialPoissonModels.py to simulate
-the binomial and Poisson independent-default models, print the results and
-graph the tail probabilities.
------------------
-David Jamieson Bolder, February 2018
-"""
 # This is the base location for your code implementation
 # You'll need to change this to reflect your own personal location
 myHome = Path(__file__).parent / "data"
@@ -27,10 +27,7 @@ myHome = Path(__file__).parent / "data"
 dpFile = myHome / "defaultProbabilties.npy"
 expFile = myHome / "exposures.npy"
 import binomialPoissonModels as bp
-#import cmUtilities as util
 
-#importlib.reload(util)
-#importlib.reload(bp)
 plt.close("all")
 # Key inputs and parameters
 c = np.load(expFile)

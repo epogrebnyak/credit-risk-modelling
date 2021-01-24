@@ -163,11 +163,11 @@ print("Running MERTON MODEL")
 V = np.diag(sigmaA)
 OmegaA = np.dot(np.dot(V, CA), V)
 hatA, Omega = mert.computeAssetValueMoments(N, A, mu, sigma, CA, dt)
-startTime = time.clock()
+startTime = time.perf_counter()
 el[0], ul[0], var[:, 0], es[:, 0] = mert.mertonDirectSimulation(
     N, M, K, hatA, OmegaA, c6, alpha
 )
-cTime[0] = time.clock() - startTime
+cTime[0] = time.perf_counter() - startTime
 # =====================
 # TABLE: Key VaR Model results
 # =====================

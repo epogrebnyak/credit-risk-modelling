@@ -60,19 +60,19 @@ print("Running BINOMIAL MODEL")
 # (a) Calibrate
 M1[0], M2[0] = mix.calibrateVerify(a[0], b[0], myP, myRho, 0)
 # (b) Simulate
-startTime = time.clock()
+startTime = time.perf_counter()
 el[0], ul[0], var[:, 0], es[:, 0] = bp.independentBinomialSimulation(N, M, p, c, alpha)
-cTime[0] = time.clock() - startTime
+cTime[0] = time.perf_counter() - startTime
 print("Running BETA-BINOMIAL MODEL")
 # (a) Calibrate
 a[1], b[1] = mix.betaCalibrate(myP, myRho)
 M1[1], M2[1] = mix.calibrateVerify(a[1], b[1], myP, myRho, 1)
 # (b) Simulate
-startTime = time.clock()
+startTime = time.perf_counter()
 el[1], ul[1], var[:, 1], es[:, 1] = mix.betaBinomialSimulation(
     N, M, c, a[1], b[1], alpha
 )
-cTime[1] = time.clock() - startTime
+cTime[1] = time.perf_counter() - startTime
 print("Running LOGIT-NORMAL MODEL")
 # (a) Calibrate
 logit = scipy.optimize.fsolve(
@@ -82,11 +82,11 @@ a[2] = logit[0]
 b[2] = logit[1]
 M1[2], M2[2] = mix.calibrateVerify(a[2], b[2], myP, myRho, 2)
 # (b) Simulate
-startTime = time.clock()
+startTime = time.perf_counter()
 el[2], ul[2], var[:, 2], es[:, 2] = mix.logitProbitBinomialSimulation(
     N, M, c, a[2], b[2], alpha, 1
 )
-cTime[2] = time.clock() - startTime
+cTime[2] = time.perf_counter() - startTime
 # =====================
 # TABLE: Key VaR Model results
 # =====================
