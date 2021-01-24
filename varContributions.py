@@ -1,13 +1,15 @@
-import numpy as np
-import math
-import scipy
-import cmUtilities as util
-import binomialPoissonModels as bp
 import importlib
-from scipy.stats import norm
+import math
+
+import numpy as np
+import scipy
 import scipy.integrate as nInt
-import thresholdModels as th
+from scipy.stats import norm
 from scipy.stats import t as myT
+
+import binomialPoissonModels as bp
+import cmUtilities as util
+import thresholdModels as th
 
 importlib.reload(util)
 importlib.reload(th)

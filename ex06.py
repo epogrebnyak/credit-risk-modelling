@@ -1,11 +1,13 @@
-import numpy as np
 import importlib
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pylab
 
 pylab.ion()
 pylab.show()
 import time
+
 import seaborn as sns
 
 sns.set()
@@ -29,13 +31,13 @@ myHome = "/home/djb/Work/cmBook/GitHub/"
 dpFile = myHome + "defaultProbabilties.npy"
 expFile = myHome + "exposures.npy"
 tenorFile = myHome + "tenors.npy"
+import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util
-import binomialPoissonModels as bp
+import irbModel as irb
+import mertonModel as mert
 import mixtureModels as mix
 import thresholdModels as th
-import mertonModel as mert
-import irbModel as irb
 
 importlib.reload(util)
 importlib.reload(bp)

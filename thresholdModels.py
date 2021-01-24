@@ -1,15 +1,16 @@
-import numpy as np
-import math
-import cmUtilities as util
-import assetCorrelation as ac
 import importlib
-from scipy.stats import norm
-import scipy.integrate as nInt
-from scipy.stats import t as myT
+import math
+
+import numpy as np
 import numpy.linalg as anp
 import scipy
-
+import scipy.integrate as nInt
 from rpy2.robjects.packages import importr
+from scipy.stats import norm
+from scipy.stats import t as myT
+
+import assetCorrelation as ac
+import cmUtilities as util
 
 gig = importr("GIGrvg")
 

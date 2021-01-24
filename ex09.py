@@ -1,13 +1,14 @@
-import numpy as np
 import importlib
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pylab
 
 pylab.ion()
 pylab.show()
-from scipy.stats import t as myT
 import numpy.linalg as anp
 import seaborn as sns
+from scipy.stats import t as myT
 
 sns.set()
 """
@@ -26,16 +27,16 @@ David Jamieson Bolder, February 2018
 myHome = "/home/djb/Work/cmBook/GitHub/"
 # This is the transition-data file
 transitionFile = myHome + "transitionData.npy"
+import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util
-import binomialPoissonModels as bp
+import irbModel as irb
+import markovChain as mc
+import mertonModel as mert
 import mixtureModels as mix
 import thresholdModels as th
-import mertonModel as mert
-import irbModel as irb
 import varContributions as vc
 import varianceReduction as vr
-import markovChain as mc
 
 importlib.reload(util)
 importlib.reload(bp)

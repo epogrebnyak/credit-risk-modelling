@@ -1,7 +1,8 @@
-import numpy as np
 import importlib
 import time
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pylab
 
 pylab.ion()
@@ -25,12 +26,12 @@ myHome = "/home/djb/Work/cmBook/GitHub/"
 # These are the exposure and default-probability files
 dpFile = myHome + "defaultProbabilties.npy"
 expFile = myHome + "exposures.npy"
+import assetCorrelation as ac
+import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util
-import binomialPoissonModels as bp
 import mixtureModels as mix
 import thresholdModels as th
-import assetCorrelation as ac
 
 importlib.reload(util)
 importlib.reload(bp)

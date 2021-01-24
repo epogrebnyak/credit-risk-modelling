@@ -1,12 +1,13 @@
-import numpy as np
 import importlib
 import time
+from pathlib import Path
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pylab
 
 pylab.ion()
 pylab.show()
-import sys
 import seaborn as sns
 
 sns.set()
@@ -21,17 +22,15 @@ David Jamieson Bolder, February 2018
 """
 # This is the base location for your code implementation
 # You'll need to change this to reflect your own personal location
-myHome = "/home/djb/Work/cmBook/GitHub/"
+myHome = Path(__file__).parent / "data"
 # These are the exposure and default-probability files
-dpFile = myHome + "defaultProbabilties.npy"
-expFile = myHome + "exposures.npy"
-# Loading the necessary libraries
-# sys.path.insert(0, myHome + "cmLib")
-import cmUtilities as util
+dpFile = myHome / "defaultProbabilties.npy"
+expFile = myHome / "exposures.npy"
 import binomialPoissonModels as bp
+#import cmUtilities as util
 
-importlib.reload(util)
-importlib.reload(bp)
+#importlib.reload(util)
+#importlib.reload(bp)
 plt.close("all")
 # Key inputs and parameters
 c = np.load(expFile)
@@ -52,13 +51,13 @@ var = np.zeros([len(alpha), numberOfModels])
 es = np.zeros([len(alpha), numberOfModels])
 cTime = np.zeros(numberOfModels)
 # Binomial model
-startTime = time.clock()
+startTime = time.perf_counter()
 el[0], ul[0], var[:, 0], es[:, 0] = bp.independentBinomialSimulation(N, M, p, c, alpha)
-cTime[0] = time.clock() - startTime
+cTime[0] = time.perf_counter() - startTime
 # Poisson model
-startTime = time.clock()
+startTime = time.perf_counter()
 el[1], ul[1], var[:, 1], es[:, 1] = bp.independentPoissonSimulation(N, M, p, c, alpha)
-cTime[1] = time.clock() - startTime
+cTime[1] = time.perf_counter() - startTime
 # =====================
 # TABLE: Key Model results
 # =====================

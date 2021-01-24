@@ -1,14 +1,15 @@
-import numpy as np
 import importlib
 import time
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pylab
 
 pylab.ion()
 pylab.show()
+import seaborn as sns
 from scipy.optimize import minimize
 from scipy.stats import norm
-import seaborn as sns
 
 sns.set()
 """
@@ -24,12 +25,12 @@ David Jamieson Bolder, February 2018
 # This is the base location for your code implementation
 # You'll need to change this to reflect your own personal location
 myHome = "/home/djb/Work/cmBook/GitHub/"
+import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util
-import binomialPoissonModels as bp
+import mertonModel as mert
 import mixtureModels as mix
 import thresholdModels as th
-import mertonModel as mert
 
 importlib.reload(util)
 importlib.reload(bp)

@@ -1,12 +1,12 @@
-import numpy as np
-import scipy
 import math
-from scipy.stats import norm
-import scipy.integrate as integrate
-import numpy.linalg as anp
-from scipy.stats import t as myT
 import time
-from scipy.stats import mvn
+
+import numpy as np
+import numpy.linalg as anp
+import scipy
+import scipy.integrate as integrate
+from scipy.stats import mvn, norm
+from scipy.stats import t as myT
 
 
 class myPrinter(object):

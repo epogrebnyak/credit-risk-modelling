@@ -1,11 +1,13 @@
-import numpy as np
 import importlib
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pylab
 
 pylab.ion()
 pylab.show()
 import time
+
 import scipy
 import seaborn as sns
 
@@ -31,17 +33,17 @@ YFile = myHome + "Y.npy"
 pMapFile = myHome + "pMap.npy"
 allPFile = myHome + "allP.npy"
 X0File = myHome + "X0.npy"
+import assetCorrelation as ac
+import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util
-import binomialPoissonModels as bp
+import irbModel as irb
+import markovChain as mc
+import mertonModel as mert
 import mixtureModels as mix
 import thresholdModels as th
-import mertonModel as mert
-import irbModel as irb
 import varContributions as vc
 import varianceReduction as vr
-import markovChain as mc
-import assetCorrelation as ac
 
 importlib.reload(util)
 importlib.reload(bp)

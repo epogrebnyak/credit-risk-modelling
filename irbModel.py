@@ -1,15 +1,14 @@
-import numpy as np
-import time
-import cmUtilities as util
 import importlib
-from scipy.stats import norm
+import time
 
-import cmUtilities as util
+import numpy as np
+from scipy.stats import gamma, norm
+
 import binomialPoissonModels as bp
+import cmUtilities as util
+import mertonModel as mert
 import mixtureModels as mix
 import thresholdModels as th
-import mertonModel as mert
-from scipy.stats import gamma
 
 importlib.reload(util)
 importlib.reload(bp)

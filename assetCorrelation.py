@@ -1,18 +1,20 @@
-import numpy as np
-import math
-import cmUtilities as util
-import numpy.linalg as anp
 import importlib
+import math
+import time
+
+import numpy as np
+import numpy.linalg as anp
 import scipy
-from scipy.stats import norm
 import scipy.integrate as nInt
-from scipy.stats import t as myT
 import scipy.linalg as asp
 from scipy.optimize import approx_fprime
-import thresholdModels as th
+from scipy.stats import norm
+from scipy.stats import t as myT
+
+import cmUtilities as util
 import markovChain as mc
-import time
 import mixtureModels as mix
+import thresholdModels as th
 
 importlib.reload(util)
 importlib.reload(th)

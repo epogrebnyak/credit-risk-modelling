@@ -1,12 +1,13 @@
-import numpy as np
 import importlib
+
 import matplotlib.pyplot as plt
+import numpy as np
 import pylab
 
 pylab.ion()
 pylab.show()
-from scipy.stats import t as myT
 import seaborn as sns
+from scipy.stats import t as myT
 
 sns.set()
 """
@@ -27,13 +28,13 @@ myHome = "/home/djb/Work/cmBook/GitHub/"
 dpFile = myHome + "defaultProbabilties.npy"
 expFile = myHome + "exposures.npy"
 regionFile = myHome + "regions.npy"
+import binomialPoissonModels as bp
 # Loading the necessary libraries
 import cmUtilities as util
-import binomialPoissonModels as bp
+import irbModel as irb
+import mertonModel as mert
 import mixtureModels as mix
 import thresholdModels as th
-import mertonModel as mert
-import irbModel as irb
 import varContributions as vc
 import varianceReduction as vr
 

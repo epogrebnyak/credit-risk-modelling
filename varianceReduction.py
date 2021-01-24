@@ -1,10 +1,11 @@
-import numpy as np
-import cmUtilities as util
 import importlib
+
+import numpy as np
+import scipy
 from scipy.stats import norm
 from scipy.stats import t as myT
-import scipy
 
+import cmUtilities as util
 import thresholdModels as th
 import varContributions as vc
 

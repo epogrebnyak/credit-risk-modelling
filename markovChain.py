@@ -1,13 +1,15 @@
-import numpy as np
-import math
-import cmUtilities as util
-import numpy.linalg as anp
 import importlib
-from scipy.stats import norm
+import math
+
+import numpy as np
+import numpy.linalg as anp
 import scipy.integrate as nInt
-from scipy.stats import t as myT
 import scipy.linalg as asp
 from scipy.optimize import approx_fprime
+from scipy.stats import norm
+from scipy.stats import t as myT
+
+import cmUtilities as util
 
 importlib.reload(util)
 

@@ -1,11 +1,13 @@
-import numpy as np
-import math
-import cmUtilities as util
-import numpy.linalg as anp
 import importlib
-from scipy.stats import norm
-import scipy.integrate as nInt
+import math
+
+import numpy as np
+import numpy.linalg as anp
 import scipy
+import scipy.integrate as nInt
+from scipy.stats import norm
+
+import cmUtilities as util
 
 importlib.reload(util)
 

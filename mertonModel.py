@@ -1,14 +1,14 @@
-import numpy as np
-import math
-import cmUtilities as util
-import numpy.linalg as anp
 import importlib
-from scipy.stats import norm
-import scipy.integrate as nInt
-from scipy.stats import t as myT
-from scipy.stats import mvn
-from scipy.optimize import minimize
+import math
 
+import numpy as np
+import numpy.linalg as anp
+import scipy.integrate as nInt
+from scipy.optimize import minimize
+from scipy.stats import mvn, norm
+from scipy.stats import t as myT
+
+import cmUtilities as util
 import thresholdModels as th
 
 
